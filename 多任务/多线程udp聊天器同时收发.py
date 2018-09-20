@@ -30,7 +30,7 @@ def main():
     # 4. 创建线程
     t_recv = threading.Thread(target=recv_msg,args=(udp_socket,))
     t_send = threading.Thread(target=send_msg,args=(udp_socket,dest_ip,dest_port))
-
+    # 5. 开始
     t_recv.start()
     t_send.start()
 

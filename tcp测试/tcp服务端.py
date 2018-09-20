@@ -12,7 +12,7 @@ def main():
          # 4.等待客户端的链接(阻塞模式) 返回一个元祖 1-新的套接字用来服务 accept
         print("等待客户端链接")
         new_client_socket,client_addr = tcp_server_socket.accept()
-        print("链接成功")
+        print("链接成功") 
         print(client_addr)
         
         while True:
