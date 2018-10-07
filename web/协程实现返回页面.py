@@ -14,8 +14,11 @@ def service_client(new_socket):
     request = new_socket.recv(1024).decode("utf-8")
 
     request_lines = request.splitlines()
-
+    file_name = ""
     ret = re.match(r"[^/]+(/[^ ]*)",request_lines[0])
+    print(ret.group(1))
+    print(request_lines)
+    print(request_lines[0])
     if ret:
         file_name = ret.group(1)
         if file_name == "/":
@@ -24,6 +27,7 @@ def service_client(new_socket):
     # 2.返回 http 格式的数据给浏览器
     # header
     try:
+        print("./html" + file_name)
         f = open("./html" + file_name, "rb")
     except:
         response = "HTTP/1.1 404 NOT FOUND\r\n" 

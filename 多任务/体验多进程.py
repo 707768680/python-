@@ -7,7 +7,7 @@ def test1():
     while True:
         print("1-------")
         time.sleep(1)
-
+ 
 
 def test2():
     while True:
@@ -23,4 +23,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main
